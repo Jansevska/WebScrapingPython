@@ -8,13 +8,13 @@ content = response.text
 
 soup = BeautifulSoup(content, 'lxml')
 
-# We can use the find() method to find the first occurrence of a tag with a given class or id.
+# Use the find() method to find the first occurrence of a tag with a given class or id.
 box = soup.find('article', class_='main-article')
 
 # title = box.find('h1').get_text()  OR
 
 # Locate title by finding the first occurrence of the h1 tag in the article tag.
-# We can use the get_text() method to get the text content of a tag.
+# Use the get_text() method to get the text content of a tag.
 title = soup.find('article', class_='main-article').h1.get_text()
 print(title)
 
